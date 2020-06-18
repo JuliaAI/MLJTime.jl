@@ -79,6 +79,9 @@ function TSdataset(filepath::String)
     end
 end
 
+function load_ts_file(fpath)
+end
+
 univariate_datasets = [
     "ACSF1",
     "Adiac",

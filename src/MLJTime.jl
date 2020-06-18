@@ -10,7 +10,8 @@ using Statistics, DecisionTree
 export RandomForestClassifierTS, InvFeatureGen,
        predict_single, InvFeatures, predict_new,
        X_y_split
-export load_gunpoint, TSdataset, univariate_datasets
+export load_dataset, load_gunpoint, TSdataset,
+       univariate_datasets
 
 export L1
 #CONSTANTS
