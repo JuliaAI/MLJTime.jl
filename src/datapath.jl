@@ -80,6 +80,14 @@ function TSdataset(filepath::String)
 end
 
 function load_ts_file(fpath)
+    data = open(fpath) do input
+          readuntil(input, "@data")
+          readlines(input)
+    end
+    data = data[2:end]
+    arrays = [parse.(Float64, split(i, r"[:,]")) for i in data]
+    array = transpose(hcat(arrays...))
+    return array
 end
 
 univariate_datasets = [
