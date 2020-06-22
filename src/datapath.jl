@@ -79,6 +79,24 @@ function TSdataset(filepath::String)
     end
 end
 
+"""
+`load_ts_file(fpath)` takes the path to `.ts` files and returns the
+ Table and Array.
+"""
+function load_ts_file(fpath)
+#`readuntil` and `readlines` are used in combination so that we read data
+# required only for transformation into julia array and table.
+    data = open(fpath) do input
+          readuntil(input, "@data")
+          readlines(input)
+    end
+    data = data[2:end] # removes  the empty string.
+    # split the string and convert each element into Float64.
+    arrays = [parse.(Float64, split(i, r"[:,]")) for i in data]
+    array = transpose(hcat(arrays...)) # Creates 2D Array.
+    return table(eachcol(array)...), array
+end
+
 univariate_datasets = [
     "ACSF1",
     "Adiac",
