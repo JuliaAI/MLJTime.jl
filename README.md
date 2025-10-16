@@ -1,15 +1,17 @@
 # MLJTime
-An [MLJ](https://github.com/alan-turing-institute/MLJ.jl) compatible Julia toolbox for machine learning with
+An [MLJ](https://github.com/JuliaAI/MLJ.jl) compatible Julia toolbox for machine learning with
 time series.
 
-[![Build Status](https://github.com/alan-turing-institute/MLJTime.jl/workflows/CI/badge.svg)](https://github.com/alan-turing-institute/MLJTime.jl/actions)
-[![Coverage](http://codecov.io/github/alan-turing-institute/MLJTime.jl/coverage.svg?branch=master)](http://codecov.io/github/alan-turing-institute/MLJTime.jl?branch=master)
+**Warning.** This package is not presently being maintained.
+
+[![Build Status](https://github.com/JuliaAI/MLJTime.jl/workflows/CI/badge.svg)](https://github.com/JuliaAI/MLJTime.jl/actions)
+[![Coverage](http://codecov.io/github/JuliaAI/MLJTime.jl/coverage.svg?branch=master)](http://codecov.io/github/JuliaAI/MLJTime.jl?branch=master)
 
 
 ## Installation
 To install MLJTime.jl, launch Julia and run:
 ```julia
-]add "https://github.com/alan-turing-institute/MLJTime.jl.git"
+]add "https://github.com/JuliaAI/MLJTime.jl.git"
 ```
 MLJTime.jl requires Julia version 1.0 or greater.
 
